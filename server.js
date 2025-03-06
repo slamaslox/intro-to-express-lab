@@ -14,7 +14,7 @@ app.get('/roll/:number', (req, res) => {
     let maxNumber = parseInt(req.params.number)
 
     if (!isNaN(maxNumber)) {
-        let result = Math.floor(Math.random() * maxNumber) + 1;
+        let result = Math.floor(Math.random() * (maxNumber + 1)); 
         res.send(`You rolled a ${result}!`);
     } else {
         res.send(`You must specify a number.`);
